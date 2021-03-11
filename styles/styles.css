@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+body {
+  color: #fff;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  max-width: 200px;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.btn-primary {
+  background-color: blue;
+  color: #fff;
+}
+
+.landing-page {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.landing-page .above-nav {
+  max-width: 1200px;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-page .above-nav .logo {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.landing-page .above-nav div {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .landing-page .above-nav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.landing-page nav .container {
+  max-width: 1200px;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 4rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.landing-page nav .nav-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .landing-page nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.landing-page nav .nav-links li {
+  margin: 0 1rem;
+}
+
+.landing-page nav .toggle .bar1,
+.landing-page nav .toggle .bar2,
+.landing-page nav .toggle .bar3 {
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+  background-color: #fff;
+}
+
+@media (min-width: 600px) {
+  .landing-page nav .toggle {
+    display: none;
+  }
+}
+
+.landing-page main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.landing-page main .container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 20%;
+}
+
+.landing-page main h4 {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,52 @@
+@import 'variables';
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+
+
+html {
+    
+}
+
+body {
+    color: $light;
+}
+
+h1, h2, h3, h4, p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: $light;
+}
+
+li {
+    list-style: none;
+    
+}
+
+%btn {
+    max-width: 200px;
+    width: 100%;
+    padding: 1rem 2rem;
+    
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: blue;
+    color: $light;
+}
+
