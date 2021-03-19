@@ -1,35 +1,47 @@
 @import 'variables';
+@import 'mixins';
 
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
-    line-height: 1.5;
+    font-family: 'Playfair Display', serif;
 }
-
-
 
 html {
     
+    font-size: 0.9rem;
+    @include mediaQuery(600px) {
+        font-size: 1rem;
+    }
 }
 
 body {
+    
+    overflow-x: hidden;
     color: $light;
+    background-color: $dark;
+    letter-spacing: 1px;
+    
 }
 
 h1, h2, h3, h4, p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    @include mediaQuery(600px) {
+        margin-bottom: 2rem;
+    }
 }
-
-
 
 
 
 a {
     text-decoration: none;
     color: $light;
+    text-transform: uppercase;
+    &:hover {
+        transition: $transition;
+        color: $primary;
+    }
 }
 
 li {
@@ -38,15 +50,40 @@ li {
 }
 
 %btn {
-    max-width: 200px;
-    width: 100%;
     padding: 1rem 2rem;
-    
+    display: inline-block;
+    font-weight: bold;
+    transition: $transition;
+    text-transform: capitalize;
 }
 
 .btn-primary {
     @extend %btn;
-    background-color: blue;
-    color: $light;
+    background-color: $primary;
+    color: $dark;
+    border: 1px solid $primary;
+
+    &:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+}
+
+.text {
+    @include mediaQuery(992px) {
+        width: 70%;
+    }
+}
+
+.above-title {
+    color: $primary;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+.title {
+    font-size: 2rem;
+    
+    text-transform: capitalize;
+
 }
 

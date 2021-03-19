@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Law Office</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -12,43 +12,117 @@
     
     <header class="landing-page">
         <div class="above-nav">
-            <a href="#" class="logo">LawOffice</a>
-            <div>
-                <ul class="hours">
-                <li><h3>Monday - Friday</h3></li>
-                <li>10:00h - 18:00h</li>
-            </ul>
-            <ul class="phone">
-                <li><h3>Call us</h3></li>
-                <li><a href="">+381 (0)69 1990 16 5</a></li>
-            </ul>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="">
+            </a>
+            <div class="toggle">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
+            <ul class="languages">
+                <li><a href="" class="en">EN</a></li>
+                <li><a href="">SR</a></li>
+            </ul>
+        </div>
         </div>
         <nav>
             <div class="container">
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Practice Areas</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="nav-link"><a  href="#">Home</a></li>
+                    <li class="nav-link"><a  href="#">Practice Areas</a></li>
+                    <li class="nav-link"><a  href="#">About</a></li>
+                    <li class="nav-link"><a  href="#">Contact</a></li>
                 </ul>
 
-                <div class="toggle">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
+                
             </div>
         </nav>
         <main>
             <div class="container">
-                <h4>welcome to law office</h4>
-                <h1>defend your constitutional rights</h1>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-           
-                <a href="" class="btn-primary">Learn More</a>
+                <div class="text">
+                    <h1>defend your constitutional rights</h1>
+                    <p>We provide best legal advice to help you and court representation</p>
+                    <a href="" class="btn-primary">Learn More</a>
+                </div>
             </div>
         </main>
     </header>
+    <aside class="hamburger-menu">
+        <ul class="languages">
+            <li><a href="" class="en">EN</a></li>
+            <li><a href="">SR</a></li>
+        </ul>
+        <ul class="hamburger-navlinks">
+            <li class="hamburger-nav-link"><a  href="#">Home</a></li>
+            <li class="hamburger-nav-link"><a  href="#">Practice Areas</a></li>
+            <li class="hamburger-nav-link"><a  href="#">About</a></li>
+            <li class="hamburger-nav-link"><a  href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <section class="practice-areas">
+        <div class="container">
+            <div class="title-container">
+                <h3 class="above-title">practice areas</h3>
+                <h1 class="title">what we offer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lectus donec vitae porta vulputate vitae, neque ac. Odio nulla sit fames ipsum nunc. Egestas quis id orci sed massa mauris enim arcu. Gravida nec amet morbi lorem ornare leo.</p>    
+            </div>
+           <div class="grid-container">
+                <div class="grid-item" id="item1">
+                    <img src="images/handcuff1.png" alt="">
+                    <h3>Criminal Law</h3>
+                </div>
+                <div class="grid-item" id="item2">
+                    <img src="images/finance1.png" alt="">
+                    <h3>Finance Law</h3>
+                </div>
+                <div class="grid-item" id="item3">
+                    <img src="images/home1.png" alt="">
+                    <h3>Property Law</h3>
+                </div>
+                <div class="grid-item" id="item4">
+                    <img src="images/laptop1.png" alt="">
+                    <h3>IT Law</h3>
+                </div>
+                <div class="grid-item" id="item5">
+                    <img src="images/briefcase1.png" alt="">
+                    <h3>Labour Law</h3>
+                </div>
+                <div class="grid-item" id="item6">
+                    <img src="images/family1.png" alt="">
+                    <h3>Family Law</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+           <div class="about-text">
+            <h3 class="above-title">about</h3>
+            <h1 class="title">who we are</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lectus donec vitae porta vulputate vitae, neque ac. Odio nulla sit fames ipsum nunc. Egestas quis id orci sed massa mauris enim arcu. Gravida nec amet morbi lorem ornare leo.</p>
+            <button class="accordion">our mission</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nemo natus? Minima corrupti dolor dolores facere blanditiis molestias, sequi nesciunt.</p>
+        </div>
+            <button class="accordion">our vision</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nemo natus? Minima corrupti dolor dolores facere blanditiis molestias, sequi nesciunt.</p>
+        </div>
+            <button class="accordion">our value</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nemo natus? Minima corrupti dolor dolores facere blanditiis molestias, sequi nesciunt.</p>
+        </div>
+
+        </div>
+           <div class="about-image"></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

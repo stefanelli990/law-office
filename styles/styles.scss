@@ -3,83 +3,313 @@
 @import 'mixins';
 
 
+// landing page
 .landing-page {
-    background-image: linear-gradient(rgba($dark, 0.5), rgba($dark, 0.5)), url('../images/bg-image.jpg');
+    background-image: linear-gradient(rgba($dark, 0.65), rgba($dark, 0.65)), url('../images/bg-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-
+    text-transform: uppercase;
+    position: relative;
+    right: 0;
+    transition: $transition;
     .above-nav {
-        @include container(1rem, 1200px);
+        background-color: rgba($dark, 0.20);
+    .container {
+        @include container(1rem 2rem, 1200px);
+        height: 5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         .logo {
             font-size: 3rem;
             text-align: center;
         }
-        div {
-            display: none;
-            @include mediaQuery(768px) {
-                display: flex;
-                gap: 4rem;
-            }
+       .languages {
+           display: none;
+           @include mediaQuery(992px) {
+            display: flex;
+           }
+           li {
+               margin-left: 1rem;
+           }
+       }
+       .en {
+           color: $primary;
+       }
+
+    }
+    .toggle {
+       
+        cursor: pointer;
+        .bar1,
+        .bar2,
+        .bar3 {
+            transition: $transition;
+            width: 30px;
+            height: 2px;
+            margin: 7px 0;
+            background-color: $light;
             
         }
+        @include mediaQuery(600px) {
+            display: none;
+        }
+    }
+    
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-8px, 6px);
+      }
+      
+      .change .bar2 {
+        opacity: 0;
+      }
+      
+      .change .bar3 {
+        width: 30px;
+        transform: rotate(45deg) translate(-6px, -5px);
+      }
 
-        
+
     }
     nav {
-       
+        display: none;
+        @include mediaQuery(768px)  {
+            display: block;
+        }
         .container {
-            @include container(1rem, 1200px);
+            @include container(1rem 2rem, 1200px);
+            height: 5rem;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            min-height: 4rem;
-            background-color: rgba($light, 0.25);
+            
         }
         .nav-links {
-            display: none;
-            @include mediaQuery(768px) {
+            
+            
+            
                 display: flex;
-            }
+            
 
             li {
-                margin: 0 1rem;
+                margin-right: 2rem;
             }
         }
-        .toggle {
-            .bar1,
-            .bar2,
-            .bar3 {
-                width: 30px;
-                height: 2px;
-                margin: 5px;
-                background-color: $light;
-                
-            }
-            @include mediaQuery(600px) {
-                display: none;
-            }
-        }
+        
     }
 
     main {
-        min-height: 100vh;
+        
+        .container {
+            @include container(0 2rem, 1200px);
+            
+            height: 85vh;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         text-align: left;
-        text-transform: uppercase;
-        .container {
-            @include container(0 1rem, 1200px);
-            padding-right: 20%;
+        
         }
-        h4 {
-            margin-bottom: 0;
+
+        
+        h1 {
+            font-size: 2rem;
+            @include mediaQuery(992px) {
+                font-size: 4rem;
+            }
+        }
+         p {
+            font-size: 1rem;
+            @include mediaQuery(992px) {
+                font-size: 1.5rem;
+            }
+           
         }
     }
+}
+
+.body-scroll {
+    overflow-y: hidden;
+    @include mediaQuery(768px) {
+        overflow-y: visible;
+    }
+}
+
+.landing-page-active {
+    right: 70%;
+    @include mediaQuery(768px) {
+        right: 0;
+    }
+}
+
+.hamburger-menu {
+    padding: 1rem;
+    transition: $transition;
+    right: -70%;
+    position:fixed;
+    top: 0;
+    height: 100vh;
+    background-color: $dark;
+    width: 70%;
+    
+    
+    @include mediaQuery(768px) {
+        display: none;
+    }
+
+    .hamburger-navlinks {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+        li {
+            margin: 0 1rem 5rem 1rem;
+        }
+    }
+    .languages {
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgb(78, 78, 78);
+        width: 100%;
+        li {
+            padding: 2rem 0;
+            margin: 0 1rem ;
+            
+        }
+        .en {
+            color: $primary;
+        }
+    }
+}
+
+.hamburger-menu-active {
+    right: 0;
+}
+
+
+//practice areas
+.practice-areas {
+    .container {
+
+        @include container(5rem 2rem, 1200px);
+        @include mediaQuery(600px) {
+            @include container(10rem 2rem, 1200px);
+        }
+    }
+    .grid-container {
+       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        @include mediaQuery(600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mediaQuery(768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        grid-auto-rows: 250px;
+        gap: 1rem;
+    }
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: darken($dark, 1);
+        border: 1px solid $dark;
+        transition: $transition;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid $primary;
+        }
+        &:hover h3 {
+            color: $primary;
+        }
+    }
+    img {
+     width: 75px;
+     height: 75px;   
+     margin-bottom: 1.5rem;    
+    }
+}
+
+.about {
+    .container {
+        @include container(0rem 2rem 5rem, 1200px);
+        @include mediaQuery(600px) {
+            @include container(0rem 2rem 10rem, 1200px);
+        }
+        @include mediaQuery(768px) {
+            display: flex;
+            gap: 2rem;
+        }
+        @include mediaQuery(1200px) {
+            gap: 3rem;
+        }
+        
+    }
+    .about-text {
+        flex: 1;
+    }
+    .about-image {
+        display: none;
+        @include mediaQuery(768px) {
+            flex: 1;
+            display: block;
+            background: url('../images/about-img.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 600px;
+        }
+    }
+    .accordion {
+        background-color: $primary;
+        color: $dark;
+        cursor: pointer;
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: $transition;
+        margin-bottom: 0.5rem;
+        position: relative;
+        font-size: 1rem;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: bold;
+        &::after {
+            content: '\25BC'; 
+            color: $dark;
+            font-size: 1.3rem;
+        }
+        
+      }
+
+      .accordion-active {
+          &::after {
+            content: "\25B2"; 
+          }
+      }
+
+      .panel {
+        background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+       
+        p {
+            padding: 1rem;
+            
+        }
+      }
+      
 }
