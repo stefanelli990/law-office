@@ -10,19 +10,19 @@
 
 html {
     
-    font-size: 0.9rem;
-    @include mediaQuery(600px) {
+    scroll-behavior: smooth;
+    font-size: 4vw;
+    @include mediaQuery(400px) {
         font-size: 1rem;
     }
 }
 
 body {
-    
     overflow-x: hidden;
     color: $light;
     background-color: $dark;
+    line-height: 1.5;
     letter-spacing: 1px;
-    
 }
 
 h1, h2, h3, h4, p {
@@ -31,6 +31,18 @@ h1, h2, h3, h4, p {
         margin-bottom: 2rem;
     }
 }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.17rem;
+    }
 
 
 

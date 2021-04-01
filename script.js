@@ -66,21 +66,16 @@ accordion.forEach(acc => {
     });
 });
 
-const t = TweenLite.from('.hamburger-nav-link', {opacity: 0, stagger: .1, duration: .4, delay: .3, x: 50}).reversed(true);
+
 
 //hamburger menu
 toggle.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('hamburger-menu-active');
     landingPage.classList.toggle('landing-page-active');
     body.classList.toggle('body-scroll');
-    t.reversed(!t.reversed());
     toggle.classList.toggle('change');
 });
 
-//gsap 
 
-gsap.from(".text", {opacity: 0, x: -100, duration: 1, delay: 0.5});
-gsap.from(".nav-link", {stagger: .1, duration: .4, opacity: 0, delay: 1.8});
-gsap.from(".above-nav", {y: -100, duration: 1, delay: 1});
 
 
