@@ -100,30 +100,71 @@ li {
   text-transform: capitalize;
 }
 
-.landing-page {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 24, 24, 0.65)), to(rgba(24, 24, 24, 0.65))), url("../images/bg-image.jpg");
-  background-image: linear-gradient(rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.65)), url("../images/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  text-transform: uppercase;
+.wrapper {
   position: relative;
   right: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.landing-page nav {
-  background-color: rgba(24, 24, 24, 0.2);
+.wrapper.active {
+  right: 70%;
 }
 
-.landing-page nav .container {
+@media (min-width: 768px) {
+  .wrapper.active {
+    right: 0;
+  }
+}
+
+.wrapper .navbar {
+  background-color: rgba(24, 24, 24, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.wrapper .navbar.active {
+  position: fixed;
+  background: #181818;
+  -webkit-animation: nav-animation 0.5s;
+          animation: nav-animation 0.5s;
+}
+
+@-webkit-keyframes nav-animation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.wrapper .navbar.toggle-nav {
+  left: -70%;
+}
+
+.wrapper .navbar .container {
   max-width: 1200px;
   padding: 1rem 2rem;
   width: 100%;
   margin: 0 auto;
-  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,54 +176,54 @@ li {
           align-items: center;
 }
 
-.landing-page nav .nav-links {
+.wrapper .navbar .nav-links {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .landing-page nav .nav-links {
+  .wrapper .navbar .nav-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.landing-page nav .nav-links li {
+.wrapper .navbar .nav-links li {
   margin-right: 2rem;
 }
 
-.landing-page nav .logo {
+.wrapper .navbar .logo {
   font-size: 3rem;
   text-align: center;
 }
 
-.landing-page nav .languages {
+.wrapper .navbar .languages {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .landing-page nav .languages {
+  .wrapper .navbar .languages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.landing-page nav .languages li {
+.wrapper .navbar .languages li {
   margin-left: 1rem;
 }
 
-.landing-page nav .en {
+.wrapper .navbar .en {
   color: #F3CF7A;
 }
 
-.landing-page .toggle {
+.wrapper .toggle {
   cursor: pointer;
 }
 
-.landing-page .toggle .bar1,
-.landing-page .toggle .bar2,
-.landing-page .toggle .bar3 {
+.wrapper .toggle .bar1,
+.wrapper .toggle .bar2,
+.wrapper .toggle .bar3 {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: 30px;
@@ -192,24 +233,33 @@ li {
 }
 
 @media (min-width: 768px) {
-  .landing-page .toggle {
+  .wrapper .toggle {
     display: none;
   }
 }
 
-.landing-page .change .bar1 {
+.wrapper .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-8px, 6px);
           transform: rotate(-45deg) translate(-8px, 6px);
 }
 
-.landing-page .change .bar2 {
+.wrapper .change .bar2 {
   opacity: 0;
 }
 
-.landing-page .change .bar3 {
+.wrapper .change .bar3 {
   width: 30px;
   -webkit-transform: rotate(45deg) translate(-6px, -5px);
           transform: rotate(45deg) translate(-6px, -5px);
+}
+
+main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 24, 24, 0.65)), to(rgba(24, 24, 24, 0.65))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.65)), url("../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 main .container {
@@ -258,16 +308,6 @@ main h1 {
 @media (min-width: 768px) {
   .body-scroll {
     overflow-y: visible;
-  }
-}
-
-.landing-page-active {
-  right: 70%;
-}
-
-@media (min-width: 768px) {
-  .landing-page-active {
-    right: 0;
   }
 }
 

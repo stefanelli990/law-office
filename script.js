@@ -8,9 +8,10 @@ const item6 = document.querySelector('#item6');
 const accordion = document.querySelectorAll(".accordion");
 const toggle = document.querySelector('.toggle');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
-const landingPage = document.querySelector('.landing-page');
+const wrapper = document.querySelector('.wrapper');
 const body = document.querySelector('body');
 const hamburgerLinks = document.querySelectorAll('.hamburger-navlink');
+const navbar = document.querySelector('.navbar');
 
 //mouseover
 item1.addEventListener('mouseover', () => {
@@ -53,6 +54,19 @@ item6.addEventListener('mouseout', () => {
     item6.firstElementChild.setAttribute('src', 'images/family1.png');
 });
 
+
+//navigation animation
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 500) {
+        navbar.classList.add('active');
+        
+    } else {
+        navbar.classList.remove('active');
+
+    }
+});
+
+
 //accordion
 accordion.forEach(acc => {
     acc.addEventListener('click', () => {
@@ -71,7 +85,9 @@ accordion.forEach(acc => {
 //hamburger menu
 toggle.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('hamburger-menu-active');
-    landingPage.classList.toggle('landing-page-active');
+    wrapper.classList.toggle('active');
+    navbar.classList.toggle('toggle-nav');
+  
     body.classList.toggle('body-scroll');
     toggle.classList.toggle('change');
 });
