@@ -1,14 +1,14 @@
+const accordion = document.querySelectorAll(".accordion");
+const toggle = document.querySelector('.toggle');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerLinks = document.querySelectorAll('.hamburger-navlink');
+const navbar = document.querySelector('.navbar');
 const item1 = document.querySelector('#item1');
 const item2 = document.querySelector('#item2');
 const item3 = document.querySelector('#item3');
 const item4 = document.querySelector('#item4');
 const item5 = document.querySelector('#item5');
 const item6 = document.querySelector('#item6');
-const accordion = document.querySelectorAll(".accordion");
-const toggle = document.querySelector('.toggle');
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const hamburgerLinks = document.querySelectorAll('.hamburger-navlink');
-const navbar = document.querySelector('.navbar');
 
 //mouseover
 item1.addEventListener('mouseover', () => {
