@@ -10,9 +10,9 @@
 
 html {
     
-    scroll-behavior: smooth;
-    font-size: 4vw;
-    @include mediaQuery(400px) {
+    // scroll-behavior: smooth;
+    font-size: 0.8rem;
+    @include sm {
         font-size: 1rem;
     }
 }
@@ -26,30 +26,26 @@ body {
 }
 
 h1, h2, h3, h4, p {
-    margin-bottom: 1rem;
-    @include mediaQuery(600px) {
-        margin-bottom: 2rem;
-    }
+    margin-bottom: 1.5rem;
+   
 }
 
-    h1 {
-        font-size: 2rem;
-    }
+h1 {
+    font-size: 2rem;
+}
     
-    h2 {
-        font-size: 1.5rem;
-    }
+h2 {
+    font-size: 1.5rem;
+}
     
-    h3 {
-        font-size: 1.17rem;
-    }
-
+h3 {
+    font-size: 1.17rem;
+}
 
 
 a {
     text-decoration: none;
     color: $light;
-    text-transform: uppercase;
     &:hover {
         transition: $transition;
         color: $primary;
@@ -58,11 +54,10 @@ a {
 
 li {
     list-style: none;
-    
 }
 
 %btn {
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: inline-block;
     font-weight: bold;
     transition: $transition;
@@ -81,21 +76,15 @@ li {
     }
 }
 
-.text {
-    @include mediaQuery(992px) {
-        width: 70%;
-    }
-}
 
 .above-title {
+    text-align: center;
     color: $primary;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     text-transform: capitalize;
 }
 .title {
-    font-size: 2rem;
-    
+    text-align: center;
     text-transform: capitalize;
-
 }
 

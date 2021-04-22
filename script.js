@@ -1,4 +1,3 @@
-
 const item1 = document.querySelector('#item1');
 const item2 = document.querySelector('#item2');
 const item3 = document.querySelector('#item3');
@@ -8,8 +7,6 @@ const item6 = document.querySelector('#item6');
 const accordion = document.querySelectorAll(".accordion");
 const toggle = document.querySelector('.toggle');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
-const wrapper = document.querySelector('.wrapper');
-const body = document.querySelector('body');
 const hamburgerLinks = document.querySelectorAll('.hamburger-navlink');
 const navbar = document.querySelector('.navbar');
 
@@ -59,10 +56,8 @@ item6.addEventListener('mouseout', () => {
 window.addEventListener('scroll', () => {
     if(window.pageYOffset > 500) {
         navbar.classList.add('active');
-        
     } else {
         navbar.classList.remove('active');
-
     }
 });
 
@@ -85,11 +80,10 @@ accordion.forEach(acc => {
 //hamburger menu
 toggle.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('hamburger-menu-active');
-    wrapper.classList.toggle('active');
+   
     navbar.classList.toggle('toggle-nav');
   
-    body.classList.toggle('body-scroll');
-    toggle.classList.toggle('change');
+   
 });
 
 

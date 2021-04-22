@@ -3,90 +3,53 @@
 @import 'mixins';
 
 
-// landing page
-.wrapper {
-    
-    
-    position: relative;
-    right: 0;
+
+
+.navbar {
+    background-color: rgba($dark, 0.20);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     transition: $transition;
     &.active {
-        right: 70%;
-        @include mediaQuery(768px) {
-            right: 0;
-        }
-    }
-    .navbar {
-        background-color: rgba($dark, 0.20);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transition: $transition;
-        &.active {
-            position: fixed;
-            background: $dark;
-            animation: nav-animation 0.5s;
+        position: fixed;
+        background: $dark;
+        animation: nav-animation 0.5s;
          
             
-            @keyframes nav-animation {
-                0% {
-                    transform: translateY(-100%);
-                }
-                100% {
-                    transform: translateY(0%);
-                }
+        @keyframes nav-animation {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0%);
             }
         }
-        &.toggle-nav {
-            left: -70%;
-        }
-        .container {
-            @include container(1rem 2rem, 1200px);
-            
+    }
+       
+    .container {
+            @include container(1rem, 600px);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
-        }
-        
-        .nav-links {
-            
-            
-            display: none;
-        @include mediaQuery(768px)  {
-            display: flex;
-        }
-                
-            
-
-            li {
-                margin-right: 2rem;
-            }
-        }
-
-
-
-        .logo {
-            font-size: 3rem;
-            text-align: center;
-        }
-       .languages {
-           display: none;
-           @include mediaQuery(768px) {
-            display: flex;
-           }
-           li {
-               margin-left: 1rem;
-           }
-       }
-       .en {
-           color: $primary;
-       }
-
+                @include xl {
+                    @include container(1rem, 1200px);
+                }
     }
+        
+    .nav-links {
+        display: none;
+            li {
+                margin-left: 2rem;
+            }
+                @include xl  {
+                    display: flex;
+                }
+            }
+
+
     .toggle {
-       
         cursor: pointer;
         .bar1,
         .bar2,
@@ -96,71 +59,55 @@
             height: 2px;
             margin: 7px 0;
             background-color: $light;
-            
         }
-        @include mediaQuery(768px) {
+        @include xl {
             display: none;
+            }
         }
     }
     
-    .change .bar1 {
-        transform: rotate(-45deg) translate(-8px, 6px);
-      }
-      
-      .change .bar2 {
-        opacity: 0;
-      }
-      
-      .change .bar3 {
-        width: 30px;
-        transform: rotate(45deg) translate(-6px, -5px);
-      }
         
-    }
+    
 
-    main {
+    .showcase {
         background-image: linear-gradient(rgba($dark, 0.65), rgba($dark, 0.65)), url('../images/bg-image.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        min-height: 100vh;
+        background-attachment: fixed;
         .container {
-            @include container(0 2rem, 1200px);
-            
-            height: 85vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        text-align: left;
-        
-        }
+            @include container(0 1rem, 600px);   
+            height: 100vh;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            @include xl {
+                @include container(0 1rem, 1200px); 
+            }
+            }
 
-        
+        .text {
+            text-transform: uppercase;
+            max-width: 1000px;
+            
+        }
         h1 {
             line-height: 1.3;
-            font-size: 2rem;
-            @include mediaQuery(992px) {
+            font-size: 2.3rem;
+            @include xl {
                 font-size: 4rem;
             }
         }
-       p {
-           @include mediaQuery(992px) {
-               font-size: 1.5rem;
-           }
-       }
+       
     }
 
 
-.body-scroll {
-    overflow-y: hidden;
-    @include mediaQuery(768px) {
-        overflow-y: visible;
-    }
-}
 
 
 
+// hamburger menu
 .hamburger-menu {
     padding: 1rem;
     transition: $transition;
@@ -170,9 +117,11 @@
     height: 100vh;
     background-color: $dark;
     width: 70%;
+    &.active {
+        right: 0;
+    }
     
-    
-    @include mediaQuery(768px) {
+    @include xl {
         display: none;
     }
 
@@ -186,24 +135,7 @@
             margin: 0 1rem 5rem 1rem;
         }
     }
-    .languages {
-        display: flex;
-        justify-content: flex-start;
-        border-bottom: 1px solid rgb(78, 78, 78);
-        width: 100%;
-        li {
-            padding: 2rem 0;
-            margin: 0 1rem ;
-            
-        }
-        .en {
-            color: $primary;
-        }
-    }
-}
-
-.hamburger-menu-active {
-    right: 0;
+ 
 }
 
 
@@ -211,13 +143,13 @@
 .practice-areas {
     .container {
 
-        @include container(5rem 2rem, 1200px);
+        @include container(5rem 1rem, 600px);
         @include mediaQuery(600px) {
-            @include container(10rem 2rem, 1200px);
+            @include container(10rem 1rem, 1200px);
         }
     }
     .grid-container {
-       
+        padding-top: 2rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         @include mediaQuery(600px) {
@@ -246,8 +178,8 @@
         }
     }
     img {
-     width: 75px;
-     height: 75px;   
+     width: 50px;
+     height: 50px;   
      margin-bottom: 1.5rem;    
     }
 }
