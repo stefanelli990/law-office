@@ -7,6 +7,7 @@ const mobileMenuLinks = document.querySelectorAll('.mobile-menu__nav-link');
 const toggleMenu = document.querySelector('.main-nav__toggle');
 const closeMenu = document.querySelector('.mobile-menu__close');
 const copyrightYear = document.getElementById('copyright-year');
+const body = document.querySelector('body');
 
 // faq accordion
 
@@ -45,16 +46,19 @@ window.addEventListener('scroll', () => {
 
 toggleMenu.addEventListener('click', () => {
     mobileMenu.classList.add('active');
+    body.classList.add('no-scroll');
 });
 
 closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');Menu
+    mobileMenu.classList.remove('active');
+    body.classList.remove('no-scroll');
 });
 
 // close menu mobile nav link click
 mobileMenuLinks.forEach(mobileMenuLink => {
     mobileMenuLink.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
+        body.classList.remove('no-scroll');
     })
 })
 

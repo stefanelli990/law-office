@@ -53,6 +53,9 @@ html {
 body {
   color: var(--clr-dark);
 }
+.no-scroll {
+  overflow: hidden;
+}
 img {
   width: 100%;
 }
