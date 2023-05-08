@@ -378,10 +378,10 @@ p {
   height: 100%;
   width: 100%;
   z-index: 100;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
   padding: var(--size-16);
   transform: translateX(100%);
   transition: var(--transition);
@@ -413,6 +413,12 @@ p {
   gap: var(--size-16);
   flex: 1;
   color: var(--clr-white);
+}
+.mobile-menu__bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
 }
 .mobile-menu__contact-infos {
   width: 100%;
