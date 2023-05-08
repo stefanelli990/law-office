@@ -452,26 +452,14 @@ p {
 /* hero */
 
 .hero {
-  background-image: url('assets/images/hero-img.jpg');
+  background-image: linear-gradient(
+    hsl(209deg 87.25% 15.31% / 90%),
+    hsl(209deg 81.96% 6.4% / 90%)
+  ) ,url('assets/images/hero-img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background-image: var(--clr-overlay);
-}
-.hero > * {
-  z-index: 1;
-  position: relative;
 }
 .hero__container {
   min-height: 100vh;
