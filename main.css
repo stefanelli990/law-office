@@ -552,6 +552,12 @@ p {
 .practice-areas__item {
   padding: 1.5rem;
   border: 1px solid var(--clr-border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.practice-areas__item:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
 }
 .practice-areas__item .icon-wrapper {
   height: var(--size-64);
