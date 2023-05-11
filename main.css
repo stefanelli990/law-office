@@ -624,6 +624,12 @@ p {
 }
 .attorneys__item {
   width: calc((100% / 1) - 0px);
+  border: 3px solid transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.attorneys__item:hover {
+  border: 3px solid var(--clr-accent);
 }
 @media (min-width: 600px) {
   .attorneys__item {
