@@ -553,7 +553,6 @@ p {
   padding: 1.5rem;
   border: 1px solid var(--clr-border);
   transition: var(--transition);
-  cursor: pointer;
 }
 .practice-areas__item:hover {
   background-color: var(--clr-accent);
@@ -626,7 +625,6 @@ p {
   width: calc((100% / 1) - 0px);
   border: 3px solid transparent;
   transition: var(--transition);
-  cursor: pointer;
 }
 .attorneys__item:hover {
   border: 3px solid var(--clr-accent);
